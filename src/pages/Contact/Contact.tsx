@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
-import { FiMail, FiPhone, FiMapPin, FiMessageSquare } from "react-icons/fi";
-import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 
 interface FormData {
     name: string;
@@ -34,7 +32,6 @@ export default function Contact() {
 
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [touched, setTouched] = useState<Record<string, boolean>>({});
-    const [showTooltip, setShowTooltip] = useState(false);
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -263,22 +260,14 @@ export default function Contact() {
         }
     };
 
-    const lat = 10.95013889;
-    const lng = 78.09797222;
-    const address = "Imbotex Pvt Ltd, 123 Business Street, Chennai";
 
     return (
         <main className={styles.contact}>
             <div className={styles.row2}>
                 <div
                     className={styles.mapContainer}
-                    onMouseEnter={() => setShowTooltip(true)}
-                    onMouseLeave={() => setShowTooltip(false)}
                 >
                     <div
-                        className={styles.mapContainer}
-                        onMouseEnter={() => setShowTooltip(true)}
-                        onMouseLeave={() => setShowTooltip(false)}
                     >
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1744763989195!2d78.09956259206709!3d10.950189464935383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa2fba049d30fb%3A0x95f852d4569aa13e!2sSri+Vinayaga+Organic+Cotton+Wadding+Industries!5e0!3m2!1sen!2sin!4v1457959574006"

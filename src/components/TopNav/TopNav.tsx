@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/vinayaga-logo.svg";
 import styles from "./TopNav.module.css";
 
 const links = [
